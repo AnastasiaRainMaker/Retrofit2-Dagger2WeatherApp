@@ -1,0 +1,41 @@
+ [{
+	"id": 524901,
+	"name": "Moscow",
+	"country": "RU",
+	"coord": {
+		"lon": 37.615555,
+		"lat": 55.75222
+	}
+}, {
+	"id": 2988506,
+	"name": "Paris",
+	"country": "FR",
+	"coord": {
+		"lon": 2.34864,
+		"lat": 48.85339
+	}
+}, {
+	"id": 2643743,
+	"name": "London",
+	"country": "GB",
+	"coord": {
+		"lon": -0.12574,
+		"lat": 51.50853
+	}
+}, {
+	"id": 1850147,
+	"name": "Tokyo",
+	"country": "JP",
+	"coord": {
+		"lon": 139.691711,
+		"lat": 35.689499
+	}
+}, {
+	"id": 4880731,
+	"name": "Washington",
+	"country": "US",
+	"coord": {
+		"lon": -91.69294,
+		"lat": 41.299179
+	}
+}]

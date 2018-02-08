@@ -27,16 +27,16 @@ public class AppModule {
     }
 
     @Singleton @Provides
-    public Context provideContext(){
+    Context provideContext(){
         return context;
     }
 
     @Singleton @Provides
-    public SharedPreferences provideSharedPreferences(Context context){
+    SharedPreferences provideSharedPreferences(Context context){
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
     @Singleton @Provides
-    public RetrofitApi.WeatherApiInterface provideWeatherApiInterface() {
+    RetrofitApi.WeatherApiInterface provideWeatherApiInterface() {
         String baseUrl = "http://api.openweathermap.org";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)

@@ -17,6 +17,4 @@ public class Weather {
     public void setMain(Main main) {
         this.main = main;
     }
-
-
 }
