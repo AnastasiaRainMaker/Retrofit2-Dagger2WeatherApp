@@ -3,15 +3,14 @@ package com.example.anastasia.retrofit2dagger2weatherapp.modules;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
 import com.example.anastasia.retrofit2dagger2weatherapp.rest.RetrofitApi;
-
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
+
+import static com.example.anastasia.retrofit2dagger2weatherapp.Constants.baseUrl;
 
 /**
  * Created by anastasia on 2/5/18.
@@ -37,7 +36,6 @@ public class AppModule {
     }
     @Singleton @Provides
     RetrofitApi.WeatherApiInterface provideWeatherApiInterface() {
-        String baseUrl = "http://api.openweathermap.org";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())

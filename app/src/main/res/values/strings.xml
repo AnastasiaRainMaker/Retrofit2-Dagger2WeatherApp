@@ -3,4 +3,6 @@
     <string name="temperature">Temperature is %.1f</string>
     <string name="max_temp">Max temperature is %.1f</string>
     <string name="min_temp">Min temperature is %.1f</string>
+    <string name="response_msg">Response received but request not successful. Response:</string>
+    <string name="request_error_msg">Request error!</string>
 </resources>

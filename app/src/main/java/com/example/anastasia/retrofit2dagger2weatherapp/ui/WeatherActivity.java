@@ -31,6 +31,10 @@ import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
 
+import static com.example.anastasia.retrofit2dagger2weatherapp.Constants.appId;
+import static com.example.anastasia.retrofit2dagger2weatherapp.Constants.link;
+import static com.example.anastasia.retrofit2dagger2weatherapp.Constants.tag;
+
 public class WeatherActivity extends AppCompatActivity {
 
     @Inject
@@ -47,10 +51,9 @@ public class WeatherActivity extends AppCompatActivity {
     private TextView cityView;
     private String cityName;
     private Integer cityId;
-    private String appId;
-    double temp;
-    double max;
-    double min;
+    private double temp;
+    private double max;
+    private double min;
     private Place[] placeAr;
 
     @Override
@@ -58,8 +61,6 @@ public class WeatherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         MyApp.app().basicComponent().inject(this);
-        appId = "012db5f55ecd002e85825976ad49243d";
-        String link = "https://s-media-cache-ak0.pinimg.com/originals/c1/1e/ea/c11eeac4b497feb04bcc74bf54fdada9.jpg";
         initView();
         loadImage(link);
         try {
@@ -145,13 +146,13 @@ public class WeatherActivity extends AppCompatActivity {
                         minView.setText(String.format(context.getResources().getString(R.string.min_temp),min));
                         cityView.setText(cityName);
                     } else {
-                        Log.e("MainActivity", "Response received but request not successful. Response: " + response.raw());
+                        Log.e(tag, getString(R.string.response_msg) + response.raw());
                     }
                 }
 
                 @Override
                 public void onFailure(Throwable t) {
-                    Log.e("MainActivity", "Request error!");
+                    Log.e(tag, getString(R.string.request_error_msg));
                 }
             });
         }

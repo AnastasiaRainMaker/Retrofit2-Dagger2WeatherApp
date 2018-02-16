@@ -1,6 +1,5 @@
 package com.example.anastasia.retrofit2dagger2weatherapp.models;
 
-import com.example.anastasia.retrofit2dagger2weatherapp.models.Main;
 
 /**
  * Created by anastasia on 2/6/18.
