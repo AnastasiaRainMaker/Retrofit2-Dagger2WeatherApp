@@ -1,2 +1,5 @@
 # Retrofit2+Dagger2WeatherApp
-A sample Android app that gets current weather forecast from openweathermap.org using Retrofit 2 and Dagger 2.
+[DEPRECATED] 
+An example of how you should not write your mobile apps.
+
+Don't put UI and networking logic into View layour (Main Activity)
